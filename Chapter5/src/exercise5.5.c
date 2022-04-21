@@ -22,15 +22,14 @@ char *strncpyVersion(char *s, char *ct, int n){
     char *ps = s, *pct = ct;
     while(n-- > 0 && (*ps++ = *pct++) != '\0')
         ;
+    while (n-- > 0)
+        *ps = '\0';
     return s;
 }
 /* copy at most n characters of string ct to end of string s. return s. */
 char *strncatVersion(char *s, char *ct, int n){
-    char *ps = s, *pct = ct;
-    for (; *ps != '\0'; ps++)
-        ;
-    while(n-- > 0 && (*ps++ = *pct++) != '\0')
-        ;
+    char *ps = s;
+    strncpyVersion(ps + strlen(ps), ct, n);
     return s;
 }
 /* compare at most n characters of string cs to string ct.
