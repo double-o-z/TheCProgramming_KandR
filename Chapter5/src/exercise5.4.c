@@ -13,11 +13,15 @@ int exercise5_4(){
 int strend(char s[], char t[]){
     char *sp = s;
     char *tp = t;
-    while (*sp++ != '\0')
+    int sizet;
+
+    for (; *sp != '\0'; sp++) /* progress sp to end of string */
         ;
-    sp--;
-    while ((*sp++ = *tp++) != '\0'){
-        ;
-    }
-    return 0;
+    for (sizet = 0; *tp != '\0'; tp++) /* progress tp to end of string, and get size of t string. */
+        sizet++;
+
+    while (*sp-- == *tp-- && sizet > 0)
+        sizet--;
+
+    return (sizet == 0);  /* returns 1 if sp and tp where reversed back sizet times, otherwise 0. */
 }
