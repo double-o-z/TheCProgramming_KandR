@@ -3,7 +3,7 @@
 
 int main()
 {
-    /* exercise5_3(); */
-    exercise5_4();
+    exercise5_3();
+    /*exercise5_4();*/
     return 0;
 }
