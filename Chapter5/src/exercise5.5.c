@@ -1,7 +1,6 @@
 #include "../include/exercise5.5.h"
 
 int exercise5_5(){
-    int n = 6;
     char s[100] = "0123456789", t[] = "6666666666";
     char *cpy, *cat;
     int cmp;
