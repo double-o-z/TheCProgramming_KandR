@@ -5,10 +5,10 @@ CFLAGS=-I$(IDIR) -Wall -ansi -pedantic
 ODIR=obj
 LDIR =../lib
 
-_DEPS = exercise5.10.h exercise5.5.h exercise5.4.h exercise5.3.h
+_DEPS = exercise5.10.h exercise5.5.h exercise5.4.h exercise5.3.h exercise5.2.h exercise5.1.h
 DEPS = $(patsubst %,$(IDIR)/%,$(_DEPS))
 
-_OBJ = main.o exercise5.10.o exercise5.5.o exercise5.4.o exercise5.3.o exercise5.2.o
+_OBJ = main.o exercise5.10.o exercise5.5.o exercise5.4.o exercise5.3.o exercise5.2.o exercise5.1.o
 OBJ = $(patsubst %,$(ODIR)/%,$(_OBJ))
 
 
