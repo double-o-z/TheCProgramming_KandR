@@ -25,7 +25,7 @@ int exercise5_1(){
     printf("Exercise 5.1\n");
     for (n = 0;  n < SIZE && getint(&array[n]) != EOF; n++)
         ;
-    for (i = 0; i < SIZE && *(array+i) != '\0'; i++) {
+    for (i = 0; i < n; i++) {
         printf("array[%d]: %d\n", i, *(array+i));
     }
     return 0;
