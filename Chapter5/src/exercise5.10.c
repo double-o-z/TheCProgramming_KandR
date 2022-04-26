@@ -23,7 +23,7 @@ int pop(void)
     }
     return(stack[--stk_ptr]);
 }
-int main (int argc, char *argv[])
+int exercise5_10(int argc, char *argv[])
 {
     int i;
     int tmp;

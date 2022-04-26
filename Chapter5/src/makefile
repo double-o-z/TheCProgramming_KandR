@@ -8,12 +8,12 @@ LDIR =../lib
 _DEPS = exercise5.10.h exercise5.5.h exercise5.4.h exercise5.3.h
 DEPS = $(patsubst %,$(IDIR)/%,$(_DEPS))
 
-_OBJ = exercise5.10.o exercise5.5.o exercise5.4.o exercise5.3.o
+_OBJ = main.o exercise5.10.o exercise5.5.o exercise5.4.o exercise5.3.o exercise5.2.o
 OBJ = $(patsubst %,$(ODIR)/%,$(_OBJ))
 
 
 $(ODIR)/%.o: %.c $(DEPS)
 	$(CC) -c -o $@ $< $(CFLAGS)
 
-exercise5.10: $(OBJ)
+main: $(OBJ)
 	$(CC) -o $@ $^ $(CFLAGS)
